@@ -1,3 +1,4 @@
+package come.example.Lists
 class node<T> {
     T data;
     node<?> next;
