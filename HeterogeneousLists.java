@@ -1,4 +1,4 @@
-package Lists.HeteroList;
+package Lists;
     
 class node<T> {
     T data;
