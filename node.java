@@ -2,8 +2,7 @@ package Lists;
     
 public class node<T> {
     T data;
-    node<?> next;
-    String type;
+    node<?> next;
 
     public node(T data) {
         this.data = data;
