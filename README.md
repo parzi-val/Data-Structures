@@ -2,7 +2,7 @@
 Implementations of various kinds of Data Structures.
 ___________________________________________________
 
-## Heterogeneous lists
+## Heterogeneous lists[]
 Java implementation of Python style lists (untyped).\
 Lets you append any type of data:
 - Primitive Datatypes (Int, Float, Double etc).
