@@ -1,11 +1,11 @@
 package Lists;
     
-class node<T> {
+public class node<T> {
     T data;
     node<?> next;
     String type;
 
-    node(T data) {
+    public node(T data) {
         this.data = data;
         this.next = null;
     }
