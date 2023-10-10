@@ -16,6 +16,6 @@ Syntax
 ```java
 node<?> list = new node<>(#first element (any type));
 list.append(#next element (any type));
-list.printlist();
+list.printList();
 ```
 
