@@ -10,7 +10,7 @@ Lets you append any type of data:
 - Arrays (Use wrapper classes for primitive datatypes) (Integer[], Double[]);
 - User-defined (Custom class objects and object arrays);
 - Collections.
-- Self elementing (element can be a heterogeneous list)./
+- Self elementing (element can be a heterogeneous list).
 
 Syntax
 ```java
