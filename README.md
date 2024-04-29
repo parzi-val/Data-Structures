@@ -24,4 +24,4 @@ list.append(#next element (any type));
 list.printList();
 ```
 
-![example](https://imgur.com/a/mBi0j5W)
+![example](https://i.imgur.com/1kibpH3.png)
