@@ -19,8 +19,12 @@ Lets you append any type of data:
 Syntax
 
 ```java
-node<?> list = new node<>(#first element (any type));
+node<?> list = new node<>();
 list.append(#next element (any type));
+
+for(int i = 0; i < list.length; i++)
+    list.get(i).print();
+
 list.printList();
 ```
 
