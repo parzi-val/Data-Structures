@@ -1,17 +1,18 @@
 package Lists;
 
-public class node<T> {
+public class List<T> {
     T data;
-    node<?> next;
+    List<?> next;
     boolean headNode;
+    public int length;
 
-    public node() {
+    public List() {
         this.data = null;
         this.next = null;
         this.headNode = true;
     }
 
-    public node(T data) {
+    public List(T data) {
         this.data = data;
         this.next = null;
         this.headNode = false;
@@ -20,15 +21,17 @@ public class node<T> {
     @SuppressWarnings("unchecked")
     public <T2> void append(T2 data) {
         if (this.headNode && this.data == null) {
-            this.data = (T) (Object) data;
+            this.data = (T) data;
+            this.length = 1;
             return;
         }
 
-        node<?> pointer = this;
+        List<?> pointer = this;
         while (pointer.next != null) {
             pointer = pointer.next;
         }
-        pointer.next = new node<>(data);
+        pointer.next = new List<>(data);
+        this.length++;
     }
 
     private void printArray(Object data) {
@@ -41,9 +44,9 @@ public class node<T> {
                 }
                 if (array[i] instanceof Object[]) {
                     printArray(array[i]); // Recursively print subarrays
-                } else if (array[i] instanceof node<?>) {
+                } else if (array[i] instanceof List<?>) {
                     // Handle the case where an element is a linked list (node)
-                    ((node<?>) array[i]).printList();
+                    ((List<?>) array[i]).printList();
                 } else {
                     System.out.print(array[i]);
                 }
@@ -52,27 +55,39 @@ public class node<T> {
         }
     }
 
-    private void print() {
+    public void print(boolean ln) {
         if (data instanceof Object[]) {
             printArray(data);
-        } else if (data instanceof node<?>) {
-            ((node<?>) data).printList(); // Handle the case where data is a linked list (node)
+        } else if (data instanceof List<?>) {
+            ((List<?>) data).printList(); // Handle the case where data is a linked list (node)
         } else {
             System.out.print(data);
         }
+        if (ln)
+            System.out.println();
     }
 
-    // Print the linked list
     public void printList() {
         System.out.print("{");
-        node<?> current = this;
+        List<?> current = this;
         while (current != null) {
-            current.print();
+            current.print(false);
             current = current.next;
             if (current != null) {
                 System.out.print(", ");
             }
         }
         System.out.print("}");
+    }
+
+    public List<?> get(int index) {
+        List<?> pointer = this;
+        int currentIndex = 0;
+
+        while (pointer != null && currentIndex < index) {
+            pointer = pointer.next;
+            currentIndex++;
+        }
+        return (pointer != null) ? (List<?>) pointer : null;
     }
 }
