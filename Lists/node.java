@@ -25,7 +25,6 @@ public class node<T> {
         }
 
         node<?> pointer = this;
-
         while (pointer.next != null) {
             pointer = pointer.next;
         }
