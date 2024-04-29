@@ -23,7 +23,7 @@ node<?> list = new node<>();
 list.append(#next element (any type));
 
 for(int i = 0; i < list.length; i++)
-    list.get(i).print();
+    list.get(i).print(true/false); //takes a boolean value for new line
 
 list.printList();
 ```
