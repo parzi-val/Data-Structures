@@ -47,6 +47,8 @@ public class List<T> {
                 } else if (array[i] instanceof List<?>) {
                     // Handle the case where an element is a linked list (node)
                     ((List<?>) array[i]).printList();
+                } else if (array[i] instanceof String) {
+                    System.out.print("\"" + array[i] + "\"");
                 } else {
                     System.out.print(array[i]);
                 }
@@ -60,6 +62,8 @@ public class List<T> {
             printArray(data);
         } else if (data instanceof List<?>) {
             ((List<?>) data).printList(); // Handle the case where data is a linked list (node)
+        } else if (data instanceof String) {
+            System.out.print("\"" + data + "\"");
         } else {
             System.out.print(data);
         }

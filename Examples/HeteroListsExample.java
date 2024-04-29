@@ -4,7 +4,7 @@ class Main {
     public static void main(String[] args) {
         List<?> list = new List<>();
 
-        list.append("world"); // String values
+        list.append("Hello, World"); // String values
         list.append(42); // Any kinds of numeric values
         list.append(new Integer[] { 1, 2, 3, 4 }); // Arrays (of any type)
 
@@ -18,5 +18,9 @@ class Main {
         for (int i = 0; i < list.length; i++) {
             list.get(i).print(true);
         }
+
+        System.out.println();
+
+        list.printList();
     }
 }
